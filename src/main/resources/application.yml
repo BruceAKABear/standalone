@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: stand-alone
+  profiles:
+    active: dev

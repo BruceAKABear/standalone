@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="pro.dengyi.standalone.dao.UserDao">
+
+	<select id="getexts" resultType="pro.dengyi.standalone.model.UserExt">
+					SELECT
+		t_ids.rid,
+		t_user.username
+	FROM
+		t_ids
+		INNER JOIN t_user ON t_ids.user_id = t_user.id
+	WHERE
+		t_user.id = #{uid}
+	</select>
+</mapper>
